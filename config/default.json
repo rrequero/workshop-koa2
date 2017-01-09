@@ -1,0 +1,18 @@
+{
+     "logger": {
+        "name": "koa2-example",
+        "level": "debug",
+        "toFile": false,
+        "dirLogFile": null
+    },
+    "service": {
+        "id": "koa2-example",
+        "name": "Koa2 Example",
+        "port": 8000
+    },
+    "mongodb": {
+        "database": "users",
+        "host": "localhost",
+        "port": 27017
+    }
+}

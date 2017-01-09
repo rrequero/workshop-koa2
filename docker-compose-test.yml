@@ -1,0 +1,21 @@
+test:
+  build: .
+  ports:
+    - "8000"
+  container_name: koa2-example
+  command: test
+  environment:
+    NODE_ENV: test
+    NODE_PATH: app/src
+    PORT: 8000
+  links:
+    - mongo
+  volumes:
+    - ./app:/opt/koa2-example/app
+mongo:
+  image: mongo
+  container_name: koa2-example-mongo
+  command: --smallfiles
+  ports:
+    - "27017"
+  restart: always

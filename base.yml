@@ -1,0 +1,17 @@
+base:
+  build: .
+  ports:
+    - "8000:8000"
+  container_name: koa2-example
+  environment:
+    PORT: 8000
+    NODE_PATH: app/src
+mongo:
+  image: mongo
+  container_name: koa2-example-mongo
+  command: --smallfiles
+  ports:
+    - "27017"
+  volumes:
+    - $HOME/docker/koa2-example/mongodb:/data/db
+  restart: always

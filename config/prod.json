@@ -1,0 +1,10 @@
+{
+    "logger": {
+        "name": "koa2-example",
+        "level": "warn",
+        "toFile": false,
+        "dirLogFile": null
+    },
+    "service": {
+    }
+}

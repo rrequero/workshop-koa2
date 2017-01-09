@@ -1,0 +1,15 @@
+develop:
+  extends:
+    file: base.yml
+    service: base
+  ports:
+    - "35739:35729"
+  command: develop
+  links:
+    - mongo
+  volumes:
+    - ./app:/opt/koa2-example/app
+mongo:
+  extends:
+    file: base.yml
+    service: mongo
